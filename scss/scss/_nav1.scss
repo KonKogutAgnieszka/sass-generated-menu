@@ -1,0 +1,35 @@
+@import 'mixins';
+@import 'variables';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif
+}
+
+nav{
+    width: 100vw
+}
+
+ul{
+    margin: 10px;
+    width: 100%;
+    list-style: none;
+    @include box-flex(row, space-around);
+    li{
+        width: 20%;
+        a{
+            display: block;
+            background-color: #000;
+            line-height: 40px;
+            text-align: center;
+            color: $font-color;
+            text-decoration: none;
+            text-transform: uppercase;
+            &:hover{
+                background-color: red;
+            }
+        }
+    }
+}
